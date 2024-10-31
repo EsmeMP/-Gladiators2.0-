@@ -1,0 +1,731 @@
+/* Reseteo CSS básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* h1 Ventas */
+h1 {
+    position: relative;
+    top: 30px;
+    left: 40px;
+}
+
+/* Contenedor de los dos contenedores */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    gap: 20px; /* Ajusta el espacio entre los elementos */
+}
+
+/* Contenedor principal (tabla) */
+.principal-container{
+    width: 85%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f;
+    padding: 20px;
+    margin-right: 20px;
+    position: relative
+}
+
+/* Contenedor  de ventas, no.Venta, y el id */
+.sec-title{
+    padding: 15px 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    width: auto;
+}
+
+/* NoVenta y Id de la venta */
+.sec-title h5 {
+    left: 600px;
+    width: 130px;
+    height: 40px;
+    font-family: Epilogue;
+    font-size: 20px;
+    line-height: 42px;
+    font-weight: 700;
+    color: #171A1FFF;
+}
+
+/* Id de la venta (numero) */
+.sec-title h5:nth-child(2) {
+    width: 90px;
+    height: 40px;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 600;
+    background: #FFEB99FF;
+    border-radius: 4px;
+}
+
+.sec-title h5:nth-child(1) {
+    position: relative;
+    left: 40px;
+}
+/* Centrar la barra de busqueda */
+.barra_busqueda form{
+    margin: 0 10%;
+}
+
+.barra_busqueda button{
+    background: #FFEB99FF;
+    padding: 10px;
+    border-radius: 10px;
+    border: #0f0f0f;
+}
+ .barra_busqueda button:hover{
+    background: #000;
+    color: #FFEB99;
+ }
+
+
+/* Texto dentro de la barra de busqueda "Buscar" */
+.textbox input {
+    width: 80%;
+    height: 90%;
+    padding-left: 12px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+    border-radius: 4px;
+    border: 2px solid #EFB034FF;
+}
+
+/* Boton de busqueda XD */
+.textbox button {
+    font-family: Inter;
+    font-size: 70%;
+    font-weight: 700;
+    background-color: #EFB034FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* Propiedad hover de la barra */
+.textbox input:hover {
+    background: #FFFFFFFF;
+    border-color: #FFEB99FF;
+}
+
+/* Propiedad hover del boton */
+.textbox button:hover {
+    background-color: rgb(24, 19, 9);
+    color: #EFB034FF;
+}
+
+/* Propiedad focus del input (letra) */
+.textbox input:focus {
+    outline: none;
+    color: rgb(0, 0, 0);
+    border: 2px solid #FFEB99;
+}
+
+/* Estilos en toda la tabla */
+table {
+    border: 2px solid #EFB034FF;
+    border-collapse: collapse;
+    width: 90%;
+    background-color: #f2f2f2;
+    margin: 30px auto;
+}
+
+/* Estilos en el encabezado de la tabla */
+thead{
+    background-color: #FFEB99FF;
+    border: 2px solid #EFB034FF;
+}
+
+/* Estilos en el cuerpo de la tabla */
+tbody tr {
+    border-bottom: 1px solid #EFB034FF;
+}
+
+/* Estilos en ambos elementos de la tabla encabezado y cuerpo */
+td, th {
+    padding: 1%;
+    /* text-align: left; */
+}
+
+th{
+    /* font-size: 5%; */
+}
+/* Contenedor de  visualizacion del ticket */
+.pre-visualizacion {
+    width: 305px;
+    height: 390px;
+    background: #F8F9FAFF;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Logo redondo del ticket */
+.logo-redondo {
+    width: 40px;
+    height: auto;
+    margin-right: 75%;
+}
+
+/* Contenedor amarillo del numero de la venta */
+.parrafo {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    width: 40%;
+    height: 13%;
+    background: #FFEB99;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parrafo :nth-child(2){
+    font-weight: bold;
+    margin: 0px 5px;
+}
+
+/* Contenedor de Parrafo atendido por: y el nombre de la persona*/
+.container-linea {
+    display: flex;
+    align-items: center;
+}
+
+.container-linea p {
+    margin: 30px 0 10px 5px;
+}
+
+.container-linea p:nth-child(2){
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* Propiedad para quitar las flechas del input */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Estilo a input */
+input[type=number] {
+    text-align: center;
+    margin: 10px 0 10px 5px
+}
+
+/* Palabra efectivo recibido */
+.efectivo label {
+    font-weight: bold;
+    margin: 10px 0 10px 5px;
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 700;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+/* Cuadro input para ingresar la cantidad de dinero */
+.efectivo input {
+    width: 70%;
+    height: 36px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 400;
+    background: rgb(249, 252, 255);
+    border-radius: 4px;
+    border-width: 1px;
+    outline: none;
+    border: 2px solid #EFB034FF;
+}
+
+.efectivo input:hover {
+    background: #FFFFFFFF;
+    border-color: #FFEB99FF;
+}
+
+.efectivo input:focus {
+    outline: none;
+    color: #EFB034FF;
+    border: 2px solid #EFB034FF;
+}
+
+/* Contendor vuelto y mont */
+.container-vuelto p{
+    margin: 10px 10px 10px 5px;
+    font-style:italic
+}
+
+/* Elemento Monto Efectivo */
+.container-vuelto p:nth-child(2){
+    font-weight: bold;
+}
+
+/* Contenedor de subtotal y total */
+.container-total p {
+    margin: 10px 10px 10px 5px;
+
+}
+
+/* Elemento Total */
+.container-total p:nth-child(2) {
+    margin: 20px 10px 10px 5px;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: Inter;
+    text-align: center;
+}
+
+/* Botones de realizar y cancelar */
+.botones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+    position: relative;
+    top: 50px;
+    /* left: 10px; */
+}
+
+.realizar-venta button {
+    background-color: #FFEB99;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    width: 150px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.botones a {
+    background-color: rgb(233, 55, 55);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    width: 150px;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.principal-container {
+    display: flex; /* Los hijos estarán en fila */
+    justify-content: space-between; /* Espacio entre los contenedores */
+    align-items: flex-start; /* Alinea los contenedores al inicio */
+    padding: 20px;
+    gap: 20px; /* Espacio entre los contenedores */
+    width: 100%;
+    box-sizing: border-box; /* Incluye padding y border en el width */
+}
+
+/* Contenedor de la tabla */
+.contenedor-tabla {
+    width: 70%; /* Ocupa el 70% del contenedor principal */
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f;
+}
+
+
+/* Contenedor de previsualización */
+.pre-visualizacion {
+    /* width: 10%; Ocupa el 30% del contenedor principal */
+    height: auto;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #F8F9FAFF;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f;
+}
+
+.principal-container {
+    display: flex;
+    justify-content: space-between; /* Espacio entre ambos contenedores */
+    align-items: flex-start; /* Alineación superior */
+}
+
+.contenedor-tabla {
+    flex: 1; /* Ocupa el espacio disponible */
+    margin-right: 20px; /* Espacio entre la tabla y la pre-visualización */
+}
+
+.pre-visualizacion {
+    width: 350px !important; /* Ancho fijo para la pre-visualización */
+}
+
+
+.botones button:hover {
+    background-color: rgb(24, 19, 9);
+    color: #FFEB99;
+}
+
+.botones a:hover {
+    background-color: rgb(24, 19, 9);
+    color: #FFEB99;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    gap: 20px; /* Ajusta el espacio entre los elementos */
+}
+
+/* Contenedor principal (tabla) */
+.principal-container{
+    display: flex;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f;
+    margin-right: 20px;
+    position: relative;
+}
+
+/* Contenedor de la tabla */
+.contenedor-tabla {
+    width: 70%; 
+    padding: 20px;
+}
+
+/* Contenedor de pre-visualización */
+.pre-visualizacion {
+    width: 100%; 
+    padding: 25px;
+    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f;
+}
+
+/* Estilos en toda la tabla */
+table {
+    border: 2px solid #EFB034FF;
+    border-collapse: collapse;
+    width: 100%; /* Asegura que la tabla ocupe todo el ancho del contenedor */
+    background-color: #f2f2f2;
+    margin: 0 auto; /* Centra la tabla dentro de su contenedor */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    gap: 20px; /* Ajusta el espacio entre los elementos */
+}
+
+/* Contenedor principal (tabla) */
+.principal-container{
+    display: flex;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f;
+    margin-right: 20px;
+    position: relative;
+}
+
+/* Contenedor de la tabla */
+.contenedor-tabla {
+    width: 70%; /* Ajusta el tamaño según sea necesario */
+    padding: 20px;
+}
+
+/* Contenedor de pre-visualización */
+.pre-visualizacion {
+    width: 25%; /* Ajusta el tamaño según sea necesario */
+    padding: 20px;
+    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f;
+}
+
+/* Estilos en toda la tabla */
+table {
+    border: 2px solid #EFB034FF;
+    border-collapse: collapse;
+    width: 100%; /* Asegura que la tabla ocupe todo el ancho del contenedor */
+    background-color: #f2f2f2;
+    margin: 0 auto; /* Centra la tabla dentro de su contenedor */
+}
+
+/* ---- */
+.principal-container {
+    display: block;
+}
+
+.principal-container h5 {
+    margin-left: 80%;
+    text-align: center;
+}
+
+.barra_busqueda button {
+    margin-right: 70%;
+}
+
+.sec-title,
+.barra_busqueda,
+.table_ventas {
+    display: block;
+    margin-bottom: 10px; /* Añade margen entre los elementos */
+}
+
+.barra_busqueda {
+    margin-top: 10px; /* Añade margen superior si es necesario */
+}
+
+.table_ventas table {
+    width: 100%; /* Para que la tabla ocupe todo el ancho disponible */
+}
+
+.sec-title {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en una columna (uno debajo del otro) */
+    align-items: center; /* Centra los elementos horizontalmente */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.barra_busqueda {
+    display: flex;
+    justify-content: center; /* Centra el botón en la barra de búsqueda */
+    margin-bottom: 15px;
+}
+
+.table_ventas {
+    margin-bottom: 20px;
+    width: 100%; /* Asegura que la tabla ocupe todo el ancho */
+}
+
+.sec-title {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    margin-bottom: 15px;
+}
+
+.barra_busqueda {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    margin-bottom: 15px;
+}
+
+.barra_busqueda button {
+    margin-left: 10px; /* Añade un margen izquierdo para separar el botón del resto */
+}
+
+.table_ventas {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Estilo base para el menú */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+.menu li {
+    position: relative;
+    display: inline-block;
+    z-index: 1000;
+}
+
+.menu li:hover ul {
+    display: block;
+    z-index: 1000;
+}
+
+.menu ul {
+    display: none;
+    position: absolute;
+    top: 120%; /* Ajusta la posición vertical del submenú */
+    left: 0;
+    z-index: 1000;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-bottom: 0; /* Espacio vertical entre elementos del submenú */
+}
+
+.menu ul li a {
+    display: block;
+    background-color: #342E00FF;
+    color: #FFF07FFF;
+    text-decoration: none;
+    padding: 10px; /* Espaciado interno para los enlaces */
+}
+
+/* Estilo para pantallas grandes (computadoras y laptops) */
+@media (min-width: 1024px) {
+
+    .menu li {
+        display: inline-block;
+    }
+
+    .menu ul {
+        top: 160%; /* Ajusta la distancia vertical del submenú */
+    }
+}
+
+/* Estilo para pantallas medianas (tablets y laptops pequeñas) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .menu li {
+        display: inline-block; /* O puedes cambiar a block si quieres un menú vertical */
+    }
+
+    .menu ul {
+        top: 120%; /* Ajusta la distancia vertical del submenú */
+    }
+}
+
+/* Estilo para pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+    .menu {
+        text-align: center; /* Centra el menú */
+    }
+
+    .menu li {
+        display: block; /* Cambia a bloque para una visualización vertical en móviles */
+    }
+
+    .menu ul {
+        position: static; /* Elimina la posición absoluta para móviles */
+        top: auto; /* Restablece la posición vertical */
+        left: auto; /* Restablece la posición horizontal */
+        width: 100%; /* Ocupa el ancho completo */
+    }
+
+    .menu ul li {
+        margin-bottom: 0; /* Espacio vertical entre elementos del submenú */
+    }
+
+    .menu ul li a {
+        padding: 15px; /* Aumenta el padding para mejorar la usabilidad en pantallas táctiles */
+    }
+
+    .menu li:hover ul {
+        display: block; /* Asegúrate de que el submenú se muestre en móviles */
+    }
+}
+
+
+
+
+
+
+
+
+/* Los dos contenedores principales responsivos */
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+    .principal-container, .pre-visualizacion {
+        width: 100%; /* Ajusta el ancho al 100% en pantallas pequeñas */
+    }
+    .pre-visualizacion {
+        margin-top: 20px; /* Añade un margen superior para separar los elementos */
+    }
+}
+
+@media (max-width: 768px) {
+    .pre-visualizacion {
+        width: 100%; /* Ajusta el ancho al 100% en pantallas pequeñas */
+        max-width: 305px; /* Límite máximo de ancho para mantener el diseño */
+        margin: 0 auto; /* Centra horizontalmente en pantallas pequeñas */
+    }
+}
+
+/* CAMBIO DE FONDO */
+/* Estilo para el modo claro */
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo para el modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+/* Estilo para el botón de modo oscuro */
+.toggle-dark-mode {
+    cursor: pointer;
+    font-size: 28px;
+    position:absolute;
+    top: 100px;
+    right: 20px;
+    color: #FFEA99; /* Amarillo como en otros elementos */
+}
+
+/* Estilo para el ícono en modo oscuro */
+body.dark-mode .toggle-dark-mode {
+    color: #FFEA99; /* Cambia el color del ícono en modo oscuro si lo deseas */
+}
+
+.toggle-dark-mode i{
+    padding-right:20px;
+    margin-bottom: 0px;
+}
+
+.fila th{
+    /* width: 30%; */
+    text-align: center;
+}
+td input{
+    width: 20%;
+    /* text-align: left; */
+}
+td input:nth-child(3){
+    width: 10%;
+    background: #000;
+}
+/* Amarillo Pastel: #FFFFCC
+Amarillo Normal: #FFD700
+Mostaza: #D4AF37
+Amarillo Claro: #FFFF99
+Amarillo Dorado: #FFDF00
+Amarillo Mostaza: #FFDB58
+Amarillo Ocre: #CC7722
+Amarillo Ámbar: #FFBF00
+Amarillo Dorado Oscuro: #B8860B
+Amarillo Maíz: #FBEC5D */
+
+/* Contenedor de pre-visualización */

@@ -1,0 +1,182 @@
+.label{
+    display: inline-table;
+    padding-left: 180px;
+    max-width: 10%;
+    padding-top: 10px;
+}
+
+.blog-button{
+    background-color: var(--color-dark-yellow);
+    width: 70px;
+    height: 30px;
+    position: relative;
+    top: 300px;
+    left: 10px;
+}
+
+h1{
+    padding-top: 10px;
+    align-items: center;
+    margin-top: 40px;
+    padding-left: 120px;
+    margin-bottom: 40px;
+}
+
+.p{
+    position:fixed;
+    top: 60px;
+    left: 400px;
+    width: 487px;
+    height: 54px;
+    background: #FFF399FF;
+    border-radius: 8px 8px 8px 8px;
+    border-width: 1px;
+    border-color: #BCC1CAFF;
+    border-style:solid;
+}
+
+.navbar {
+    background-color: #000000!important; /* Forzar el fondo negro */
+    width: 610PX;
+    height: 20PX;
+    justify-content: flex-end; /* Mueve la barra de navegación a la derecha */
+    margin-left: 750PX;
+    position: relative;
+}
+
+/* Texto amarillo para los enlaces de navegación */
+.navbar-nav .nav-item .nav-link {
+    color: #FFEA99 !important; /* Texto amarillo */
+}
+
+/* Hover: texto amarillo y fondo negro */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #FFEA99 !important; /* Texto amarillo en hover */
+    background-color: #000 !important; /* Fondo negro en hover */
+}
+
+/* Texto amarillo para la marca y otros textos dentro de la navbar */
+.navbar-brand, .navbar-toggler-icon, .navbar .h5, .logo-gladiators h5 {
+    color: #FFEA99!important; /* Texto amarillo */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background-color: #0b0b0b !important; /* Fondo negro */
+    border: none;
+}
+
+/* Texto amarillo en los elementos del dropdown */
+.dropdown-item {
+    color: #FFEA99 !important; /* Texto amarillo */
+}
+
+/* Hover en el dropdown */
+.dropdown-item:hover {
+    color: #FFEA99 !important; /* Texto amarillo en hover */
+    background-color: #000000 !important; /* Fondo negro en hover */
+}
+
+.navbar-toggler {
+    border-color: yellow; /* Cambia el color del borde del botón */
+}
+
+.navbar-toggler-icon {
+    background-image: url('../static/assets/font/menu.svg');
+}
+
+.navbar-toggler:focus, .navbar-toggler:hover {
+    background-color: #000; /* Fondo negro */
+}
+
+/* Cambiar el color del boton */
+.swal2-confirm-custom {
+    color: #494646; 
+
+}
+
+.boton-reg{
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #342E00FF;
+    background: #FFF07FFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    grid-column: span 3; 
+    justify-self: center; 
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+}
+
+
+
+
+/* Los dos contenedores principales responsivos */
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+    .principal-container, .pre-visualizacion {
+        width: 100%; /* Ajusta el ancho al 100% en pantallas pequeñas */
+    }
+    .pre-visualizacion {
+        margin-top: 20px; /* Añade un margen superior para separar los elementos */
+    }
+}
+
+@media (max-width: 768px) {
+    .pre-visualizacion {
+        width: 100%; /* Ajusta el ancho al 100% en pantallas pequeñas */
+        max-width: 305px; /* Límite máximo de ancho para mantener el diseño */
+        margin: 0 auto; /* Centra horizontalmente en pantallas pequeñas */
+    }
+}
+/* CAMBIO DE FONDO */
+/* Estilo para el modo claro */
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo para el modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+/* Estilo para el botón de modo oscuro */
+.toggle-dark-mode {
+    cursor: pointer;
+    font-size: 28px;
+    position:absolute;
+    top: 100px;
+    right: 20px;
+    color: #FFEA99; /* Amarillo como en otros elementos */
+}
+
+/* Estilo para el ícono en modo oscuro */
+body.dark-mode .toggle-dark-mode {
+    color: #FFEA99; /* Cambia el color del ícono en modo oscuro si lo deseas */
+}
+
+.toggle-dark-mode i{
+    padding-right:20px;
+    margin-bottom: 0px;
+}
+
+/* Amarillo Pastel: #FFFFCC
+Amarillo Normal: #FFD700
+Mostaza: #D4AF37
+Amarillo Claro: #FFFF99
+Amarillo Dorado: #FFDF00
+Amarillo Mostaza: #FFDB58
+Amarillo Ocre: #CC7722
+Amarillo Ámbar: #FFBF00
+Amarillo Dorado Oscuro: #B8860B
+Amarillo Maíz: #FBEC5D */
+

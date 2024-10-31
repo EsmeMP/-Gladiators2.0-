@@ -1,0 +1,10 @@
+Hacer un Repositorio en GITHUB
+
+git init
+git add .
+git commit -m "01 Colores aleatorios"
+git remote add origin https://github.com/EsmeMP/EJerciciosDOM.git
+git branch -M main
+git push -u origin main
+
+
