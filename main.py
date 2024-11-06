@@ -39,6 +39,7 @@ from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash
 from functools import wraps
 from flask import session, redirect, url_for, flash
+from datetime import datetime
 
 app = Flask(__name__)
 app.secret_key = 'super_secret_key'
@@ -745,7 +746,7 @@ def reporte_diario():
             fecha = request.args.get('fecha')
             conn = db.conectar()
             cursor = conn.cursor()
-            
+
             if fecha:
                 cursor.execute('''
                     SELECT *
@@ -754,69 +755,40 @@ def reporte_diario():
                 ''', (fecha,))
             else:
                 cursor.execute('SELECT * FROM reporte_diario')
-            
+
             datos = cursor.fetchall()
-            
+
+            # Asegúrate de imprimir los datos para ver qué se está obteniendo
+            print("Datos antes de procesar la hora:", datos)
+
+            # Asegurarse de que la hora esté en el formato correcto
+            for i in range(len(datos)):
+                hora_venta_original = datos[i][2]
+                print(f"Hora original antes de formato: {hora_venta_original}")  # Imprimir la hora original
+
+                if isinstance(hora_venta_original, datetime):
+                    datos[i] = list(datos[i])  # Convertir tupla en lista
+                    datos[i][2] = hora_venta_original.strftime('%H:%M:%S')
+
+                elif isinstance(hora_venta_original, str):
+                    try:
+                        hora_venta_original = datetime.strptime(hora_venta_original, '%H:%M:%S')
+                        datos[i] = list(datos[i])  # Convertir tupla en lista
+                        datos[i][2] = hora_venta_original.strftime('%H:%M:%S')
+                    except ValueError:
+                        pass
+
+            # Ver los datos procesados
+            print("Datos después de procesar la hora:", datos)
+
             if datos:
                 total = sum([fila[3] for fila in datos])
             else:
                 total = 0
-            
+
             cursor.close()
             db.desconectar(conn)
-            
-            # Generar el PDF del reporte diario
-            pdf = FPDF()
-            pdf.add_page()
-            
-            # Ruta del logotipo
-            logo_path = "static/assets/img/Logotipo_GladiatorRedondo.png"
-            
-            # Verificar si el archivo de logotipo existe
-            if os.path.exists(logo_path):
-                try:
-                    pdf.image(logo_path, x=(210-33)/2, y=8, w=33)
-                except Exception as e:
-                    print(f"Error al cargar la imagen: {e}")
-            else:
-                print(f"Logotipo no encontrado en la ruta: {logo_path}")
-                pdf.set_font("Arial", 'B', 12)
-                pdf.cell(200, 10, txt="Logotipo no encontrado", ln=True, align='C')
-            
-            # Título del reporte
-            pdf.ln(20)  # Espacio después del logotipo o texto alternativo
-            pdf.set_font("Arial", size=12)
-            pdf.cell(200, 10, txt="Reporte Diario", ln=True, align='C')
-            pdf.cell(200, 10, txt=f"Fecha: {fecha if fecha else 'Todas las fechas'}", ln=True, align='C')
-            pdf.ln(10)
-            
-            # Encabezados de la tabla
-            pdf.cell(40, 10, txt="ID Venta", border=1)
-            pdf.cell(60, 10, txt="Fecha", border=1)
-            pdf.cell(40, 10, txt="Hora", border=1)
-            pdf.cell(40, 10, txt="Total", border=1)
-            pdf.ln()
 
-            # Añadir los datos al PDF
-            for fila in datos:
-                pdf.cell(40, 10, txt=str(fila[0]), border=1)
-                pdf.cell(60, 10, txt=str(fila[1]), border=1)
-                pdf.cell(40, 10, txt=str(fila[2]), border=1)
-                pdf.cell(40, 10, txt=str(fila[3]), border=1)
-                pdf.ln()
-            
-            pdf.ln(10)
-            pdf.cell(200, 10, txt=f"Total: ${total:.2f}", ln=True, align='R')
-            
-            # Guardar el PDF en un buffer en memoria
-            pdf_output = io.BytesIO()
-            pdf_output.write(pdf.output(dest='S').encode('latin1'))
-            pdf_output.seek(0)
-            
-            # Guardar el buffer en la sesión para usarlo más adelante
-            session['pdf_output'] = pdf_output.getvalue()
-            
-            # Renderizar la plantilla y mostrar los datos
             return render_template('repDiario.html', datos=datos, total=total)
         else:
             return jsonify({"error": "Acceso no autorizado"}), 403
